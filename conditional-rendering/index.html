@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app-3">
+            <span v-if="seen">{{ message }}</span>
+          </div>
+          <script>
+              var app3 = new Vue({
+                el: '#app-3',
+                data: {
+                    seen: true,
+                    message: "Now you see me"
+                }
+            })
+          </script>
+    </body>
+</html>
