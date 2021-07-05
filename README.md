@@ -14,3 +14,13 @@ The basics section covers:<br>
 5. [Event handling](./user-input/)
 6. [Components](./components/)
 
+### Vue CLI for application development
+We can install Vue CLI using npm. Run the following command to install Vue on local machine.
+```shell
+npm install -g @vue/cli
+```
+Once this is done, you could get a boilerplate code by running the following command.
+```shell
+vue create <app-name>
+```
+The app created in this way can be found at [sample-app](./quiz/).
