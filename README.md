@@ -12,3 +12,5 @@ The basics section covers:<br>
 3. [Conditional rendering](./conditional-rendering/)
 4. [Looping](./loops/)
 5. [Event handling](./user-input/)
+6. [Components](./components/)
+
