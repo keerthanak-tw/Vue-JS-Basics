@@ -3,3 +3,5 @@ fileignoreconfig:
   checksum: f8050a540eb5ad05d4ac1066af9b52f338b8e2a110caeebd6d4b1fbf2d37e278
 - filename: quiz/package-lock.json
   checksum: 5fb1832949203cdd5691737f32b1e3e329dbac3519a95c7ac9da9ef955c9c7b4
+- filename: quiz/package-lock.json
+  checksum: b4e595868a59f926e24bc22f9f1e3a3c63ed1549fce0ad2200a0856f28fd6d42
