@@ -23,5 +23,6 @@ Once this is done, you could get a boilerplate code by running the following com
 ```shell
 vue create <app-name>
 ```
-The app created in this way can be found at [sample application](./quiz/) (Tutorial can be found [here](https://www.youtube.com/watch?v=4deVCNJq3qc)).
-The [bootstrap library](https://bootstrap-vue.org/), where we can get the form elements, layouts etc., is used to develop the components. 
+The app created in this way can be found at [application  1](./quiz/) (Tutorial can be found [here](https://www.youtube.com/watch?v=4deVCNJq3qc)).
+The [bootstrap library](https://bootstrap-vue.org/), where we can get the form elements, layouts etc., is used to develop the components.<br>
+Check out [application 2](./adopt-pets/) to find out how routers and vuex (state management) is used in Vue JS.
