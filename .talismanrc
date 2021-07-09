@@ -7,3 +7,5 @@ fileignoreconfig:
   checksum: b4e595868a59f926e24bc22f9f1e3a3c63ed1549fce0ad2200a0856f28fd6d42
 - filename: adopt-pets/package-lock.json
   checksum: 475b43a11192bdbb1c94c840bf43c16c294e9a5fb36db7cef40cd2f4208a89b3
+- filename: adopt-pets/package-lock.json
+  checksum: 0fb2e4517bd16865e42fb5d420937dfdfe4f22487e82c4b50d3a57168a2f5c2d
