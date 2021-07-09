@@ -25,7 +25,6 @@ describe('Home view', () => {
       localVue
     })
 
-    console.log(wrapper)
-    expect(wrapper.find("h1").text()).toBe('Adopt a new friend!')
+    expect(wrapper.find('h1').text()).toBe('Adopt a new friend!')
   })
 })
