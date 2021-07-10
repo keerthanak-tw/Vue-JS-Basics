@@ -1,9 +1,9 @@
 <template>
   <div class="home-view-container">
     <h1 id="header">Adopt a new friend!</h1>
-    <h3>Animals available to adopt: {{ animalsCount }}</h3>
-    <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
-    <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
+    <h3 id="info">Animals available to adopt: {{ animalsCount }}</h3>
+    <button id="petFormButton" @click="togglePetForm()" class="btn btn-primary">Add New Pet</button>
+    <b-form id="petForm" name="petForm" @submit.prevent="handleSubmit" v-if="showPetForm">
       <b-form-group id="input-group-2" label="Pet Name:" label-for="input-2">
         <b-form-input
           id="input-2"
