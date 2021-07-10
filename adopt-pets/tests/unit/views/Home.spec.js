@@ -21,7 +21,7 @@ describe('Home view', () => {
       }
     })
   })
-    
+
   it('should display Adopt a new friend text', () => {
     const wrapper = mount(Home, {
       store,
@@ -57,7 +57,7 @@ describe('Home view', () => {
     expect(wrapper.find('#petForm').exists()).toBeFalsy()
   })
 
-  it('should display add new pet form when button is clicked', () => {
+  it('should call togglePetForm form when add new pet button is clicked', () => {
     const wrapper = mount(Home, {
       store,
       localVue
@@ -67,6 +67,42 @@ describe('Home view', () => {
     wrapper.find('#petFormButton').trigger('click')
 
     expect(spy).toHaveBeenCalled()
-    expect(wrapper.find('#petForm').exists).toBeTruthy()
+  })
+
+  it('should render add new pet form with all fields when add new pet button is clicked', async () => {
+    const wrapper = mount(Home, {
+      store,
+      localVue
+    })
+
+    await wrapper.find('#petFormButton').trigger('click')
+
+    expect(wrapper.find('#petForm').exists()).toBeTruthy()
+    expect(wrapper.find('#name').exists()).toBeTruthy()
+    expect(wrapper.find('#species').exists()).toBeTruthy()
+    expect(wrapper.find('#age').exists()).toBeTruthy()
+    expect(wrapper.find('#submit').exists()).toBeTruthy()
+    expect(wrapper.find('#reset').exists()).toBeTruthy()
+  })
+
+  it('should display entered values in form', async () => {
+    const wrapper = mount(Home, {
+      store,
+      localVue
+    })
+
+    await wrapper.find('#petFormButton').trigger('click')
+    
+    const name = wrapper.find('#name-input')
+    const speciesOptions = wrapper.find('#species-dropdown').findAll('option')
+    const age = wrapper.find('#age-input')
+
+    await name.setValue('Bosco')
+    await speciesOptions.at(0).setSelected()
+    await age.setValue('2')
+
+    expect(wrapper.vm.formData.name).toBe('Bosco')
+    expect(wrapper.vm.formData.species).toBe('cats')
+    expect(wrapper.vm.formData.age).toBe('2')
   })
 })

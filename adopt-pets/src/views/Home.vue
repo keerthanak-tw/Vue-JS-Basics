@@ -3,36 +3,36 @@
     <h1 id="header">Adopt a new friend!</h1>
     <h3 id="info">Animals available to adopt: {{ animalsCount }}</h3>
     <button id="petFormButton" @click="togglePetForm()" class="btn btn-primary">Add New Pet</button>
-    <b-form id="petForm" name="petForm" @submit.prevent="handleSubmit" v-if="showPetForm">
-      <b-form-group id="input-group-2" label="Pet Name:" label-for="input-2">
+    <b-form id="petForm" name="petForm" @submit.prevent="handleSubmit()" v-if="showPetForm">
+      <b-form-group id="name" label="Pet Name:" label-for="name-input">
         <b-form-input
-          id="input-2"
+          id="name-input"
           v-model="formData.name"
           placeholder="Enter name"
           required
-        ></b-form-input>
+        />
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Species" label-for="input-3">
+      <b-form-group id="species" label="Species" label-for="species-dropdown">
         <b-form-select
-          id="input-3"
+          id="species-dropdown"
           v-model="formData.species"
           :options="['cats', 'dogs']"
           required
-        ></b-form-select>
+        />
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Pet's Age:" label-for="input-2">
+      <b-form-group id="age" label="Pet's Age:" label-for="age-input">
         <b-form-input
-          id="input-2"
+          id="age-input"
           v-model="formData.age"
           placeholder="Enter age"
           required
-        ></b-form-input>
+        />
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+      <b-button id="submit" type="submit" variant="primary">Submit</b-button>
+      <b-button id="reset" type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
 </template>
