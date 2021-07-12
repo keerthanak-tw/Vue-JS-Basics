@@ -3,7 +3,7 @@
     <h1 id="header">Adopt a new friend!</h1>
     <h3 id="info">Animals available to adopt: {{ animalsCount }}</h3>
     <button id="petFormButton" @click="togglePetForm()" class="btn btn-primary">Add New Pet</button>
-    <b-form id="petForm" name="petForm" @submit.prevent="handleSubmit()" v-if="showPetForm">
+    <b-form id="petForm" name="petForm" v-if="showPetForm">
       <b-form-group id="name" label="Pet Name:" label-for="name-input">
         <b-form-input
           id="name-input"
@@ -31,14 +31,14 @@
         />
       </b-form-group>
 
-      <b-button id="submit" type="submit" variant="primary">Submit</b-button>
+      <b-button id="submit" @click="handleSubmit()" type="submit" variant="primary">Submit</b-button>
       <b-button id="reset" type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Home',
   data () {
@@ -49,7 +49,7 @@ export default {
         age: 0,
         species: null
       }
-    }
+    };
   },
   computed: {
     ...mapGetters([
@@ -61,25 +61,25 @@ export default {
       'addPet'
     ]),
     togglePetForm () {
-      this.showPetForm = !this.showPetForm
+      this.showPetForm = !this.showPetForm;
     },
     handleSubmit () {
-      const { species, age, name } = this.formData
+      const { species, age, name } = this.formData;
       const payload = {
         species,
         pet: {
           name,
           age
         }
-      }
-      this.addPet(payload)
+      };
+      this.addPet(payload);
 
       this.formData = {
         name: '',
         age: 0,
         species: null
-      }
+      };
     }
   }
-}
+};
 </script>
