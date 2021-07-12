@@ -17,7 +17,7 @@ export default {
     species: String,
     pets: Array
   }
-}
+};
 </script>
 
 <style scoped>

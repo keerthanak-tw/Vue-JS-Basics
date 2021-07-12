@@ -8,22 +8,22 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import PetTable from '@/components/PetTable'
+import { mapState } from 'vuex';
+import PetTable from '@/components/PetTable';
 
 export default {
   components: {
     PetTable
   },
   data () {
-    return { }
+    return { };
   },
   computed: {
     ...mapState([
       'cats'
     ])
   }
-}
+};
 </script>
 
 <style scoped>

@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from 'vuex';
 
 export default {
   data () {
     return {
       animal: {}
-    }
+    };
   },
   computed: {
     ...mapState([
@@ -22,9 +22,9 @@ export default {
     ])
   },
   mounted () {
-    this.animal = this[this.$route.params.species][this.$route.params.id]
+    this.animal = this[this.$route.params.species][this.$route.params.id];
   }
-}
+};
 </script>
 
 <style scoped>

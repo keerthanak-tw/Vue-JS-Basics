@@ -43,4 +43,4 @@ export default [
     location: 'threed',
     notes: 'Super friendly'
   }
-]
+];
