@@ -1,22 +1,22 @@
-import mutations from '@/store/mutations'
+import mutations from '@/store/mutations';
 import cats from '@/data/cats';
 import dogs from '@/data/dogs';
 
-describe('Mutations', ()=> {
+describe('Mutations', () => {
   it('should append pet of particular species to state', () => {
     const state = {
-        cats,
-        dogs
+      cats,
+      dogs
     };
     const payload = {
-        species: 'cats',
-        pet: {
+      species: 'cats',
+      pet: {
         name: 'Bosco',
         age: '2'
-        }
+      }
     };
-    
+
     mutations.appendPet(state, payload);
     expect(state.cats.length).toBe(5);
-  })
-})
+  });
+});
