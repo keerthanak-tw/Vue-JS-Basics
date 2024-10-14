@@ -2,7 +2,7 @@ name: Auto Update PR Title
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, reopened, synchronize]
 
 jobs:
   update-title:
@@ -14,7 +14,6 @@ jobs:
           script: |
             const pr_number = context.payload.pull_request.number;
             const current_title = context.payload.pull_request.title;
-            echo current_title;
             
             // Custom logic to modify the title
             const new_title = `JIRA-1234 ${current_title}`;
