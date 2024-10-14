@@ -1,3 +1,4 @@
+- [] I have correctly marked PR with the appropriate change type
 ## Describe your changes
 
 ## Issue ticket number and link
