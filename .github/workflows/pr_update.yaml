@@ -2,7 +2,7 @@ name: Auto Update PR Title
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, reopened, synchronize]
 
 jobs:
   update-title:
