@@ -1,0 +1,28 @@
+name: Auto Update PR Title
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  update-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update PR Title
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const pr_number = context.payload.pull_request.number;
+            const current_title = context.payload.pull_request.title;
+            echo current_title;
+            
+            // Custom logic to modify the title
+            const new_title = `JIRA-1234 ${current_title}`;
+
+            // Update the title using GitHub's REST API
+            await github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr_number,
+              title: new_title
+            });
